@@ -1,0 +1,9 @@
+[project]
+name = "comfyui-riganji"
+version = "1.0.0"
+description = "Custom nodes by Riganji"
+
+[tool.comfy]
+PublisherId = "Riganji"
+DisplayName = "Riganji Nodes"
+Icon = ""
