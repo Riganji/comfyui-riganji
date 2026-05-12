@@ -8,15 +8,15 @@ A small collection of utility nodes for ComfyUI.
 
 ### 🖼️ Image Resizer
 
-Resizes images using **Lanczos resampling**. Image input is optional — the node can be used without it to generate an empty latent of a given size.
+Resizes images using **Lanczos resampling**. Image input is optional — the node can be used to generate an empty latent image of a given size.
 
 **Inputs**
 
 | Name | Type | Description |
 |---|---|---|
-| `image` | IMAGE *(optional)* | Source image batch |
+| `image` | IMAGE *(optional)* | Source image (batch) |
 | `resize_method` | Dropdown | `Scale Factor` or `Set Size` |
-| `scale_factor` | FLOAT | Multiplier for Scale Factor mode (e.g. `0.5` = half, `2.0` = double) |
+| `scale_factor` | FLOAT | Multiplier for Scale Factor mode (e.g. `0.5` = half size, `2.0` = double size) |
 | `set_width` | INT | Target width in pixels. `0` = auto (proportional to height) |
 | `set_height` | INT | Target height in pixels. `0` = auto (proportional to width) |
 
@@ -24,10 +24,10 @@ Resizes images using **Lanczos resampling**. Image input is optional — the nod
 
 | Name | Type | Description |
 |---|---|---|
-| `IMAGE` | IMAGE | Resized image batch |
+| `IMAGE` | IMAGE | Resized image (batch) |
 | `Width` | INT | Output width in pixels |
 | `Height` | INT | Output height in pixels |
-| `Latent Image` | LATENT | Empty latent sized for the output resolution (`w/8 × h/8`) |
+| `Latent Image` | LATENT | Sized empty latent image |
 
 The node displays the resulting resolution in real time as you adjust the parameters, without needing to run the pipeline.
 
@@ -35,7 +35,7 @@ The node displays the resulting resolution in real time as you adjust the parame
 
 ### 📂 Load Images (Folder)
 
-Loads an image sequence from a folder. Works like **VHS Load Images**, but additionally exposes the folder path as an output for passing downstream (e.g. to a save node).
+Loads an image sequence from a folder and additionally exposes the folder path as an output for passing downstream (e.g. to a save node).
 
 **Inputs**
 
